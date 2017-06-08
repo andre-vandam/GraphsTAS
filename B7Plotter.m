@@ -15,17 +15,21 @@
 
 %% DATA INPUT SCHEME (ANDRE'S JOB </3)
 
+
 %% EXEMPLAR FOR ANDRE <3
-x_values = (0.1:0.1:10);
+x_values = (0.1:0.01:10);
 y_values = ([0 -60*sin((pi/12)*x_values(2:end))+100]);
+y_values = [y_values;y_values+10];
+% y_values = sinc(2*pi*x_values);
 domain   = [0 10 0 100];
 title    = 'Experience vs. Confidence';
 ax_label = {'Experience (1-10)','Confidence (%)'};
-legend   = 'Dunning Kruger Effect';
+legend   = {'Dunning Kruger Effect','t2'};
 save_n   = 'fig1';
 scale    = [1 1];
 
 %% FIGURE#1
+cd C:\Users\ggarr\OneDrive\Documents\MATLAB\TAS\Master_Plotter
 
 %% FIGURE#2 
 

@@ -41,7 +41,7 @@ classdef NeatPlot
             w = obj.SCALE(1); h = obj.SCALE(2);
             set(obj.FIGUR, 'Position', [333 333 w*340 h*302])
             hold on
-            line_list = {'-','--','-.'};
+            line_list = {'-','-.','--'};
             for i=1:length(Y_VAL(:,1))
                 a = plot(obj.X_VAL, obj.Y_VAL(i,:),...
                 'LineWidth',1.5,...

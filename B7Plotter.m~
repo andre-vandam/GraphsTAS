@@ -14,7 +14,7 @@
 % he law by Adolf Kitler. Have a good day, and may the force be with you.
 
 %% DATA INPUT SCHEME (ANDRE'S JOB </3)
-qty_figs = 4;
+qty_figs = 1;
 
 %% EXEMPLAR FOR ANDRE <3
 % x_values = (0.1:0.01:10);
@@ -51,9 +51,22 @@ Y1     = [PowerArrayData(:,2) Power4ArrayData(:,2)];
 % _________________________________________________________________________
 % Revenue Plot
 % -------------------------------------------------------------------------
+
 X2     = TimeProfitX;
 Zero = zeros(length(TimeProfitX), 1);
 Y2     = [TimeProfitY Zero];
+
+Figure1 = NeatPlot(X', Y',...
+                [],...
+                [],...
+                [],...
+                [],...
+                '',...
+                [1 1],...
+                {"Time [years]" ,"Balance [euro]" },...
+                "Profit6");     
+
+
 %% FIGURE#1
 y11 = interp1(h1' , u1' , h2' ,'spline' );
 Y_VAL1 = [y11;u2'];
@@ -84,23 +97,23 @@ Y_VAL3 = Y1';
 X_VAL3 = X1';
 WINDO3 = [];
 TITLE3 = {''};
-INTER3 = [];
+INTER3 = [];%[zeros(3,1) p12'];
 AXESL3 = {'Windspeed [m/s]', 'Power Generated [W]'};
 LEGEN3 = {'Theoretical Ceiling', 'WM6'};
 SCALE3 = [1 1];
 LINES3 = [];
 SAVEN3 = 'Power6R';
 %% FIGURE#4
-Y_VAL4 = Y2';
-X_VAL4 = X2';
-WINDO4 = [];
-TITLE4 = {''};
-INTER4 = [];
-AXESL4 = {'Time [years]' ,'Balance [euro]'};
-LEGEN4 = {'Optimal Location Profit', 'Breakeven Point'};
-SCALE4 = [1 1];
-LINES4 = [];
-SAVEN4 = 'Profit6';
+Y_VAL3 = Y2';
+X_VAL3 = X2';
+WINDO3 = [];
+TITLE3 = {'Downstream Velocity (U_d) vs. Height (y)'};
+INTER3 = [];%[zeros(3,1) p12'];
+AXESL3 = {'Velocity (U), [m/s]','Height (y), [m]'};
+LEGEN3 = {'Optimal Location Profit', 'Breakeven Point'};
+SCALE3 = [1 1];
+LINES3 = [];
+SAVEN3 = '';
 
 
 %% POINTER SETUP

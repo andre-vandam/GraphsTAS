@@ -52,8 +52,8 @@ classdef NeatPlot
             end
             display(g1)
             if isempty(obj.WINDO)==1 % Default 10% domain extra
-                xlim([min(obj.X_VAL)*1.1 max(obj.X_VAL)*1.1])
-                ylim([min(min(obj.Y_VAL))*1.1 max(max(obj.Y_VAL))*1.1])
+                xlim([min(obj.X_VAL)*0.9 max(obj.X_VAL)*1.01])
+                ylim([min(min(obj.Y_VAL))*0.9 max(max(obj.Y_VAL))*1.1])
             else % Domain as specified
                 xlim([obj.WINDO(1) obj.WINDO(2)])
                 ylim([obj.WINDO(3) obj.WINDO(4)]) 
